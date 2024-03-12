@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Maven Pro", sans-serif;
+    font-size: 16px;
+}
+
+body{
+    margin: 0;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header{
+    background-color: #0C1816;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 1%;
+}
+
+.header .logo img{
+    height: 75px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header .logo img:hover{
+    transform: scale(1.2);
+}
+
+.header .navbar__links{
+    list-style: none;
+}
+
+.header .navbar__links li{
+    display: inline-block;
+    padding: 0 20px;
+    transition: 0.3s ease;
+}
+
+.header .navbar__links li:hover{
+    transform: scale(1.1);
+}
+
+.header .navbar__links a{
+    font-size: 700;
+    color: white;
+    text-decoration: none;
+}
+
+.header .navbar__links a:hover{
+    color: #B3A16A;
+}
+
+.header .btn button{
+    font-weight: 700;
+    color: #0C1816;
+    padding: 9px 25px;
+    background: #D4B68A;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.header .btn button:hover{
+    background: white;
+    color: red;
+    transform: scale(1.1);
+}
+
+/* Aca comienza la pagina */
+
+#container{
+    position: relative;
+    background-color: #000;
+    z-index: 1;
+    color: white;
+}
+
+#container .visual{
+    position: relative;
+    height: 1018px;
+}
+
+#container .visual .backVod{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#container .visual .backVod video{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 1920px;
+    width: 1920px;
+    height: 100%;
+    object-fit: cover;
+}
+
+#container .visual .visualTop{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 1280px;
+    height: 740px;
+    margin: 0 auto;
+    z-index: 3;
+}
+
+#container .visual .visualTop .XD{
+    display: block;
+    position: relative;
+    margin-top: 252px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 450px;
+    height: 132px;
+    flex-shrink: 0;
+    background-size: contain;
+    background-image: url("../assets/img/sera.png");
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    transition: all .5s ease;
+}
+
+#container .visual .visualTop .title{
+    margin: -120px auto 0;
+    width: 100%;
+    max-width: 900px;
+}
+
+#container .visual .visualTop .btns__platform{
+    margin-top: -74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+#container .visual .visualTop .btns__platform a{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.noticeList{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 2;
+}
+
+.noticeList h2{
+    font-size: 0;
+    line-height: 0;
+    zoom: 1;
+    color: transparent;
+}
+
+#container .visual .noticeList .list{
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.notice{
+    flex: 1;
+    max-width: 410px;
+}
+
+.notice__top{
+    position: relative;
+    height: 180px;
+}
+
+.notice__thumb{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.notice__thumb img{
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    transition: all .2s;
+}
+
+.notice__bottom{
+    position: relative;
+    margin: -27px auto 0;
+    display: flex;
+    width: calc(100% - 34px);
+    height: 81px;
+    background: #fff;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.notice__bottom .notice__summary .notice__bottom .notice__title{
+    padding: 0 20px;
+    line-height: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.notice__bottom .notice__title{
+    color: #000;
+    font-weight: 500;
+    font-size: 17px;
+    white-space: nowrap;
+}
+
+.notice__bottom .notice__summary{
+    display: -webkit-box;
+    color: #7e7e7e;
+    font-size: 14px;
+}
+
+.notice__bottom .notice__summary .notice__bottom .notice__title{
+    padding: 0 20px;
+    line-height: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.contact-us{
+    background-color: #111111;
+    padding: 1em 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+.contact-us h1{
+    color: wheat;
+}
+
+.contact-us a{
+    display: inline-block;
+    position: relative;
+}
+
+.contact-us .discord{
+    top: 13px;
+}
